@@ -7,30 +7,31 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
     gap: 0;
 }
 
-
-.container div {
-    width: 20px;
-    height: 20px;
-    border: 1px solid blue;
-    background-color: pink;
-    display: inline-block;
-    gap:2px;
-    /* float: left; */
-}
-
-/* .container {
+.container {
     display: flex;
     flex: 1;
     justify-content: center;
-    align-items: center;
-    border:5px solid black;
-    margin: 0;
+    align-items: flex-start;
+    margin: 10px;
     padding: 0;
-} */
+}
+
+.container div {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(2, 2, 2);
+    background-color: pink;
+}
+
+.container div :hover {
+    background-color: rgb(21, 216, 37);
+    color: black;
+    cursor: pointer;
+}
+
+

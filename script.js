@@ -11,7 +11,7 @@ function createGrid() {
         container.appendChild(row);
         row.textContent = "";
 
-        for (j = 0; j < 15; j++) {
+        for (j = 0; j < 16; j++) {
             const col = document.createElement("div");
             col.className = "col";
             row.appendChild(col);
@@ -21,3 +21,19 @@ function createGrid() {
 }
 
 createGrid();
+
+
+// Get the button element
+const button = document.querySelector('button');
+
+// Add a mouseover event listener
+button.addEventListener('mouseover', () => {
+  // Change the button's background color
+  button.style.backgroundColor = 'blue';
+});
+
+// Add a mouseout event listener
+button.addEventListener('mouseout', () => {
+  // Change the button's background color back to its original color
+  button.style.backgroundColor = '';
+});
