@@ -4,6 +4,14 @@ document.body.appendChild(div);
 
 const container = document.querySelector(".container");
 
+const newDiv = document.createElement("div");
+container.appendChild(newDiv);
+const anotherDiv = document.querySelector("div");
+const btn = document.createElement("button");
+btn.classList.add("btn");
+newDiv.appendChild(btn);
+btn.textContent = "Insert the number of squares?"
+
 function createGrid() { 
     for (i = 0; i < 16; i++) { 
         const row = document.createElement("div");
@@ -19,21 +27,25 @@ function createGrid() {
         }
     }
 }
-
 createGrid();
 
+const btnAdd = document.querySelector(".btn");
 
-// Get the button element
-const button = document.querySelector('button');
+btn.addEventListener("click", addNewGrid);
 
-// Add a mouseover event listener
-button.addEventListener('mouseover', () => {
-  // Change the button's background color
-  button.style.backgroundColor = 'blue';
-});
+function addNewGrid() {
+    const container = document.querySelector(".container");
+    for (i = 0; i < 1; i++) { 
+        const row = document.createElement("div");
+        row.className = "row";
+        container.appendChild(row);
+        row.textContent = "";
 
-// Add a mouseout event listener
-button.addEventListener('mouseout', () => {
-  // Change the button's background color back to its original color
-  button.style.backgroundColor = '';
-});
+        for (j = 0; j < 16; j++) {
+            const col = document.createElement("div");
+            col.className = "col";
+            row.appendChild(col);
+            col.textContent = "";
+        }
+    }
+}

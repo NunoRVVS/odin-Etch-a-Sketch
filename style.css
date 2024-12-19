@@ -1,37 +1,57 @@
-html,
-body {
+html, body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    gap: 0;
+    flex-direction: column; /* Ensure all content is stacked vertically */
 }
 
 .container {
     display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
     margin: 10px;
-    padding: 0;
+    padding: 20px ;
+    border: 5px solid black;
 }
 
-.container div {
-    width: 40px;
+button {
+    width: 60;
+    height: 60px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    background-color: rgb(170, 111, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally inside the button */
+}
+
+.container div.row {
+    display: flex;
+    align-items: center; /* Centers the row content */
+}
+
+.container div.col {
+    width: 50px; 
     height: 40px;
     border: 1px solid rgb(2, 2, 2);
     background-color: pink;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally inside columns */
+    align-items: center; /* Centers content vertically */
 }
 
-.container div :hover {
+.container div.col :last-child {
+    margin-bottom: 20px;
+}
+
+.container div.row :hover {
     background-color: rgb(21, 216, 37);
     color: black;
     cursor: pointer;
 }
-
-
