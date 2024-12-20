@@ -33,25 +33,17 @@ button {
 
 .container div.row {
     display: flex;
-    align-items: center; /* Centers the row content */
+    align-items: center; 
 }
 
 .container div.col {
-    width: 50px; 
-    height: 40px;
-    border: 1px solid rgb(2, 2, 2);
-    background-color: pink;
-    display: flex;
-    justify-content: center; /* Centers the content horizontally inside columns */
-    align-items: center; /* Centers content vertically */
+    display: inline-block;
+    border: 1px solid #ddd;
+    transition: background-color 0.1s ease;
 }
 
-.container div.col :last-child {
-    margin-bottom: 20px;
-}
-
-.container div.row :hover {
+/* .container div.row :hover {
     background-color: rgb(21, 216, 37);
     color: black;
     cursor: pointer;
-}
+} */
